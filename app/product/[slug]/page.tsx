@@ -26,12 +26,13 @@ async function getData(slug: string) {
 
 export const dynamic = "force-dynamic";
 
-export default async function ProductPge({
+export default async function Page({
   params,
 }: {
   params: { slug: string };
 }) {
   const data: fullProduct = await getData(params.slug);
+
 
   return (
     <div className="bg-white">
